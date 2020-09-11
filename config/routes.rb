@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get '/' => 'application#home'
   get '/signup' => 'users#new'
-  # get '/login' => 
-  # post '/login' =>
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
 
 
   resources :musics
