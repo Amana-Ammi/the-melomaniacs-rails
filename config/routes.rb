@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/' => 'application#home'
   resources :musics
   resources :reactions
   resources :reviews
