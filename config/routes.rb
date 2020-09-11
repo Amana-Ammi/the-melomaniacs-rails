@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   get '/' => 'application#home'
+  get '/signup' => 'users#new'
+  # get '/login' => 
+  # post '/login' =>
+
+
   resources :musics
   resources :reactions
   resources :reviews
