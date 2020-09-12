@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TheMelomaniacsRails</title>
+    <title>Melomaniacs</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
+  <nav>
+   Links here
+    <%=link_to "Logout", logout_path%>
+  </nav>
   <body>
+
     <%= yield %>
-  </body>
+  </body><br>
+
+    <footer class="branding">
+        <small>&copy; 2020 <strong>The Melomaniacs</strong></small>
+    </footer>
 </html>
