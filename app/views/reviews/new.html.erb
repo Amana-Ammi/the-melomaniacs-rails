@@ -1,0 +1,13 @@
+Review Form Here
+
+<%= form_for(@review) do |f| %>
+
+    <%= f.label :title, "TITLE:" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content, "CONTENT:" %>
+    <%= f.text_area :content %>
+
+    <%= f.submit "Share Your Opinion"%>
+
+<% end %>
