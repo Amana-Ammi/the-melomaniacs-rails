@@ -2,7 +2,7 @@
 Notes
 
 # Ignore my Spotify client id and secret. -- Will move later
-
+spotify_setup.rb
 
 # Ignore bundler config.
 /.bundle

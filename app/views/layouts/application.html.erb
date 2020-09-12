@@ -10,10 +10,9 @@
   </head>
 
 
-  <nav>
-   Links here
-    <%=link_to "Logout", logout_path%>
-  </nav>
+  <div>   Links here
+    <%=link_to "Logout", logout_path, method: :delete%>
+  </div>
   <body>
 
     <%= yield %>
