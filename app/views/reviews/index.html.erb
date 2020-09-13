@@ -1,9 +1,11 @@
 <h1>ALL REVIEWS </h1>
 
-<%= @reviews.each do |review|%>
+<%= @reviews.each do |review| %>
 
-    <%= review.title%>
-    <%= review.content%>
+    <%= review.title %>
+    <%= review.content %>
+    
     <%# <%= link_to review.user.username, user_path%> %>
-    <%= link_to  "DELETE REVIEW", method: :delete, data: {confirm: "Are You Sure?"%>
+    <%= button_to "DELETE REVIEW", review_path(@review.id), method: :delete %>
+    
 <% end %>

@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
-
-  resources :musics
-  resources :reactions
-  resources :reviews
   resources :users
+  # resources :musics
+  # resources :reactions
+  resources :reviews
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

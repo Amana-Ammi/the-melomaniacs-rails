@@ -14,12 +14,28 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+
+*{
+    margin: auto;
+    padding: auto;
+    font-family: "Impact", fantasy;
+}
 
 body {
-    background: url('pexels-expect-best.jpg') ;
-    background-size: cover;} 
+    // background: url('pexels-expect-best.jpg') ;
+    background-size: cover;
+} 
+
+h1 {
+    position: right;
+    left: 100px;
+    top: 150px;
+    color: black;
+    text-shadow: 2px 2px #ff0000;
+}
+
 
 
  
