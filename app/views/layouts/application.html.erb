@@ -11,9 +11,10 @@
   </head>
 
 
-  <div>   
-    <%=link_to "Logout", logout_path, method: :delete%>
-  </div>
+ <span class="navbar-toggler-icon">  
+    <%= link_to "HOME", '/'%><br>
+    <%= link_to "LOGOUT", logout_path, method: :delete%>
+  </span>
   <body>
 
     <%= yield %>
