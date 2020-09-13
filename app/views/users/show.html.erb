@@ -1,11 +1,10 @@
-<h1> User Show/Profile Page </h1>
+<h1> Hello, <%= @user.username.capitalize %></h1><br>
 
-<h1><%= @user.username.capitalize %></h1>
+
+<%= link_to "New Review", new_review_path %>
+<br>
 
 <p>
-<%= link_to "New Review", new_review_path %>
-
 Show User's Music Reviews Here
 Stretch: Maybe add an Artist/Song of the Week for the User Or a Currently Playing thing
-
 </p>

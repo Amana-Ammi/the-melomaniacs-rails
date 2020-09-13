@@ -1,8 +1,8 @@
 <h1> Login</h1>  
 
-<%= flash[:error] %><br>
-
-<%= form_for(:user) do |f|%>
+<%= flash[:error] %>
+<br>
+<p><%= form_for(:user) do |f|%>
     <%= f.label :email %>
     <%= f.email_field :email %>
 
@@ -10,4 +10,5 @@
     <%= f.password_field :password %>
 
     <%= f.submit "Login" %>
+</p>
 <%end%>
