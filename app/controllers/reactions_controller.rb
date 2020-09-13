@@ -2,7 +2,7 @@ class ReactionsController < ApplicationController
 
     def new
         @review = Review.find_by_id(params[:review_id])
-        @reaction = @review.build_reaction
+        @reaction = @review.reactions.build
     end
 
     def create
