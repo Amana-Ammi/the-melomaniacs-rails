@@ -1,1 +1,12 @@
 <h1>New Reaction</h1>
+
+<%= form_for(@reaction) do |f| %>
+
+    <%= f.label :comment, "COMMENT:" %>
+    <%= f.text_area :comment %>
+
+    <%= f.hidden_field :review_id %>
+
+    <%= f.submit "React"%>
+
+<% end %>
