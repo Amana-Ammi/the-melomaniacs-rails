@@ -1,19 +1,19 @@
 class Music < ApplicationRecord
 
-    def self.new_from_spotify_track(spotify_track)
-        Track.new(
-          spotify_id: spotify_track.id,
-          name: spotify_track.name,
-          artist: spotify_track.artists[0].name,
-          image: spotify_track.album.images[0]["url"],
-          preview: spotify_track.preview_url
+    def self.new_from_spotify_song(spotify_song)
+        Music.new(
+          spotify_id: spotify_song.id,
+          name: spotify_song.name,
+          artist: spotify_song.artists[0].name,
+          image: spotify_song.album.images[0]["url"],
+          preview: spotify_song.preview_url
         )
     end
 
-    def self.create_from_spotify_track(spotify_track)
-        track = self.new_from_spotify_track(spotify_track)
-        track.save
-        track
+    def self.create_from_spotify_song(spotify_song)
+        song = self.new_from_spotify_song(spotify_song)
+        song.save
+        song
     end
     
 end
