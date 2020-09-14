@@ -1,7 +1,9 @@
 <h1>Single Review Show Page</h1>
 
-<h3><%= @review.title %></h3>
+<h3>Your <%= @review.title.capitalize %> review for "<%= @review.song_or_album_name%>" by 
+<%= @review.artist_name %> </h3>
 <p><%= @review.content %><p>
+
 
 
 
