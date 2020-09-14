@@ -2,7 +2,7 @@
 
 <% @reviews.each do |review| %>
 <div class="form">
-    <h3><%= review.title.capitalize %></h3>
+    <h3><%= link_to review.title.capitalize, review_path(review.id) %></h3>
     <p>
         <%= review.content.capitalize %><br>
         <%= review.user.username.capitalize %>

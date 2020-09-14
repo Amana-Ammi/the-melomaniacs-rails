@@ -32,19 +32,16 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
+        # raise params.inspect
         set_review
-        if @review.present?
         @review.destroy
-        redirect_to review_path 
-        else
-            render :edit     
-        end
+        redirect_to reviews_path 
     end
 
     private
 
     def review_params
-        params.require(:review).permit(:title,:content,:song_or_album_name, :artist_name)
+        params.require(:review).permit(:title, :content, :song_or_album_name, :artist_name)
     end
 
     def set_review
