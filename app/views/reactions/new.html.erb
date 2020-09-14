@@ -1,6 +1,8 @@
 <h1>New Reaction to <%= @reaction.review.user.username.capitalize%>'s 
 <%= @reaction.review.title %> Review </h1><br>
 
+<%= render partial: 'layouts/errors', locals: {i: @reaction} %>
+
 <%= form_for(@reaction) do |f|%>
 
 <div>
@@ -8,7 +10,7 @@
     <%= f.text_area :comment %>
 </div>
     <%= f.hidden_field :review_id %>
-    
+
     <%= f.submit "REACT" %>
 
 <% end %>
