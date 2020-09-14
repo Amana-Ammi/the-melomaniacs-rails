@@ -1,9 +1,16 @@
-<h1>NEW REACTION for <%= @reaction.review.user.username.capitalize%>'s <%= @reaction.review.title %> Review </h1>
+<h1>New Reaction to </h1>
 
+<%= flash[:error] %>
+<br>
 <%= form_for(@reaction) do |f|%>
+
 <div>
-<%= f.label :comment %>
-<%= f.text_area :comment %>
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
 </div>
-<%= f.submit %>
+<div>
+    <%= f.hidden_field :review_id %>
+</div><br>
+    <%= f.submit "REACT" %>
+
 <% end %>

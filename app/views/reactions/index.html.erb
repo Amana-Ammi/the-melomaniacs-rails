@@ -1,1 +1,8 @@
 <h1>All Reactions to One User Review</h1>
+
+<% @reactions.each do |reaction|%>
+
+    <%= reaction.comment %>
+    <%= reaction.user.username %>
+
+<% end %>
