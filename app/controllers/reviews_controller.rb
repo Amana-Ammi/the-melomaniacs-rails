@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :set_review, only: [:show, :update]
+    before_action :set_review, only: [:show, :update, :edit, :destroy]
 
     def index
         @reviews = Review.all
@@ -23,7 +23,6 @@ class ReviewsController < ApplicationController
     end
 
     def edit
-        set_review
     end
 
     def update
@@ -32,8 +31,6 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
-        # raise params.inspect
-        set_review
         @review.destroy
         redirect_to reviews_path 
     end

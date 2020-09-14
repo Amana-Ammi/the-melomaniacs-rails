@@ -18,8 +18,8 @@
 <ol>
     <li><%= link_to "Edit Review", edit_review_url(@review.id)%></li>
 </ol>
+
 <ol>
-    <li><%= form_tag review_path(@review.id), method: "delete" do %></li>
-    <li><%= submit_tag "Delete" %></li>
-<% end %>
+    <li><%= link_to "Delete Review", review_path(@review), method: :delete %></li>
+
 </ol>
