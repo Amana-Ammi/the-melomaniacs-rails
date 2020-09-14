@@ -26,6 +26,8 @@ gem 'active_model_serializers'
 gem 'rspotify'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem 'omniauth'
+gem 'omniauth-spotify'
 
 
 # Use Active Storage variant

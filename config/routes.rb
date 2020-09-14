@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
+  get '/auth/spotify/callback' => 'users#spotify'
   delete '/logout' => 'sessions#destroy'
-  get '/track_search' => 'musics#search'
+  # get '/track_search' => 'musics#search'
+  
 
   resources :users
   resources :reactions
