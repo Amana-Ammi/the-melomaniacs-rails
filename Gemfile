@@ -29,7 +29,7 @@ gem 'bootstrap-sass'
 gem 'omniauth'
 gem 'omniauth-spotify'
 gem 'dotenv-rails'
-
+gem 'omniauth-facebook'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/auth/spotify/callback' => 'users#spotify'
   delete '/logout' => 'sessions#destroy'
+  get '/auth/facebook/callback' => 'fbs#create'
   # get '/track_search' => 'musics#search'
   
-
+  resources :fbs
   resources :users
   resources :reactions
   resources :reviews do 

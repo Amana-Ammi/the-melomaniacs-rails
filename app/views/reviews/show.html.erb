@@ -1,11 +1,12 @@
 
-<h1>Single Review Show Page</h1>
+<h1>Ooo, that's a good one!</h1>
 <br>
 
 <div class="container">
     <div class="child">
-        <h3>Your <%= @review.title.capitalize %> review for "<%= @review.song_or_album_name%>" by 
-            <%= @review.artist_name %> </h3>
+        <h3><%= @review.title.capitalize %>  for "<%= @review.song_or_album_name%>"</h3><br>
+        <h3> by </h3><br>
+        <h3> <%= @review.artist_name %>: </h3><br>
                 <p><%= @review.content %><p>
     </div>
 </div>

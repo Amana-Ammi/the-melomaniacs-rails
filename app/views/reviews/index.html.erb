@@ -1,7 +1,7 @@
 <h1>ALL REVIEWS </h1>
 
 <% @reviews.each do |review| %>
-
+<div class="form">
     <h3><%= review.title.capitalize %></h3>
     <p>
         <%= review.content.capitalize %><br>
@@ -9,5 +9,5 @@
     </p><br>
 
     <%= link_to "React to this Review", new_review_reaction_path(review.id)%>
-
+</div>
 <% end %>

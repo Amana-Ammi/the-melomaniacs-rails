@@ -122,3 +122,16 @@ footer.branding {
     height: 2.5rem;
     color: white;
 }
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(245, 184, 92, 0.308);;
+}
