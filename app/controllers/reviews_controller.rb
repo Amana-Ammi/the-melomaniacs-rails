@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :set_review, only: [:show, :edit, :update]
+    before_action :set_review, only: [:show, :update]
 
     def index
         @reviews = Review.all
@@ -23,16 +23,23 @@ class ReviewsController < ApplicationController
     end
 
     def edit
+        set_review
     end
 
     def update
+        # raise params.inspect
         @review.update(review_params)
         redirect_to review_path(@review)
     end
 
     def destroy
-       Review.find(params[:id]).destroy  
-       redirect_to review_url      
+        set_review
+        if @review.present?
+        @review.destroy
+        redirect_to review_path 
+        else
+            render :edit     
+        end
     end
 
     private
@@ -42,6 +49,6 @@ class ReviewsController < ApplicationController
     end
 
     def set_review
-        @review = Review.find(params[:id])
+        @review = Review.find_by_id(params[:id])
     end
 end

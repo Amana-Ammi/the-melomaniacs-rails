@@ -28,6 +28,14 @@ body {
     background-size: cover;
 } 
 
+div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: auto;
+    text-align: center;
+}
+
 h1 {
     position: right;
     left: 100px;
@@ -36,6 +44,68 @@ h1 {
     text-shadow: 2px 2px #ff0000;
 }
 
+// .boxed {
+//     width: 400px;
+//     border: 5px solid black ;
+// }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: auto;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+  
+ul li {
+    text-align: center;
+    display: inline-flex ;
+    margin: auto;
+}
+  
+ul li a {
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    padding: 5px 20px;
+    border: 5px solid #fff;
+    transition: 0.06s ease;
+    
+}
+
+ul li a:hover{
+    background-color: rgb(168, 155, 170);
+    color: #000
+}
+  
+ul li.active a{
+    background-color: #fff;
+    color: #000
+}
+  
+  /* unvisited link */
+a:link {
+    color: grey;
+}
+  
+/* visited link */
+a:visited {
+    color: red;
+}
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+.title h1{
+    color: rgb(236, 208, 208);
+}
 
  
