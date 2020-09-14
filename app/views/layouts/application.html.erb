@@ -11,12 +11,12 @@
   </head>
 
 
- <span class="navbar-toggler-icon">  
-    <%= link_to "HOME", '/'%><br>
-    <%= link_to "REVIEWS", reviews_path %><br>
-    <%= link_to "MUSIC", tracks_path %><br>
-    <%= link_to "LOGOUT", logout_path, method: :delete%><br><br>
-  </span>
+ <ul class="navbar-toggler-icon">  
+    <li><%= link_to "HOME", '/'%></li>
+    <li><%= link_to "REVIEWS", reviews_path %></li>
+    <li><%= link_to "MUSIC", tracks_path %></li>
+    <li><%= link_to "LOGOUT", logout_path, method: :delete%></li>
+  </ul>
   <body>
 
     <%= yield %>
