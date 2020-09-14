@@ -20,7 +20,8 @@
 *{
     margin: auto;
     padding: auto;
-    font-family: "Impact", fantasy;
+    font-family: Verdana , monospace;
+
 }
 
 body {
@@ -60,7 +61,9 @@ h1 {
     border: 5px solid black;
     margin: auto;
     text-align: center;
-    background-color: rgba(245, 184, 92, 0.308);;
+    background-color: rgba(245, 184, 92, 0.308);
+
+    // text-shadow: 1px 1px 0 white;
 }
 
 .page-title h1{
