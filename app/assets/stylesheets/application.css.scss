@@ -24,18 +24,10 @@
 }
 
 body {
-    background: url('pexels-expect-best.jpg') ;
+    // background: url('pexels-expect-best.jpg') ;
+    background: url('IMG_0248.jpg') ;
     background-size: cover;
 } 
-
-// div {
-//     width: 320px;
-//     padding: 10px;
-//     border: 5px solid black;
-//     margin: auto;
-//     text-align: center;
-//     background-color: #555;
-// }
 
 h1 {
     width: 50%;
@@ -43,7 +35,6 @@ h1 {
     left: 100px;
     top: 150px;
     color: black;
-    // text-shadow: 2px 2px #ff0000;
 }
 
 .title h1{
@@ -57,7 +48,6 @@ h1 {
     margin-right: auto;
     margin-left: auto;
     display: relative;
-
 }
 
 .child {
@@ -70,7 +60,7 @@ h1 {
     border: 5px solid black;
     margin: auto;
     text-align: center;
-    background-color: #555;
+    background-color: rgba(245, 184, 92, 0.308);;
 }
 
 .page-title h1{
@@ -82,7 +72,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: hsl(32, 94%, 66%);
   }
   
 ul li {
