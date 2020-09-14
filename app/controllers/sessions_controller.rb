@@ -9,9 +9,9 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
        else
-        flash[:error] = "Oh No! Looks like you entered incorrect information. Please try again."
-        redirect_to login_path   
-    end
+            flash[:error] = "Oh No! Looks like you entered incorrect information. Please try again."
+            redirect_to login_path   
+        end
     end
 
     #log out

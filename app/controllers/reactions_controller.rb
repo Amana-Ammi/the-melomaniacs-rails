@@ -1,7 +1,7 @@
 class ReactionsController < ApplicationController
+    before_action :set_review, only: [:new]
 
     def new
-        @review = Review.find_by_id(params[:review_id])
         @reaction = @review.reactions.build
     end
 
@@ -20,7 +20,7 @@ class ReactionsController < ApplicationController
     end
 
     def index
-        if @review = Review.find_by_id(params[:review_id])
+        if set_review
             @reactions = @review.reactions
         else
             @reactions = Reaction.all
@@ -31,5 +31,9 @@ class ReactionsController < ApplicationController
 
     def reaction_params
         params.require(:reaction).permit(:comment, :review_id)
+    end
+
+    def set_review
+        @review = Review.find_by_id(params[:review_id])
     end
 end
