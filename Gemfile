@@ -28,6 +28,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'omniauth'
 gem 'omniauth-spotify'
+gem 'dotenv-rails'
 
 
 # Use Active Storage variant
