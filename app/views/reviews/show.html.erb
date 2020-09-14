@@ -3,13 +3,15 @@
 <br>
 
 <div class="container">
-    <h3>Your <%= @review.title.capitalize %> review for "<%= @review.song_or_album_name%>" by 
-    <%= @review.artist_name %> </h3>
-    <p><%= @review.content %><p>
+    <div class="child">
+        <h3>Your <%= @review.title.capitalize %> review for "<%= @review.song_or_album_name%>" by 
+            <%= @review.artist_name %> </h3>
+                <p><%= @review.content %><p>
+    </div>
 </div>
 
 
 
-<ul>
+<ol>
     <li><%= link_to "Edit Review", edit_review_url(@review.id)%></li>
-</ul>
+</ol>
