@@ -1,4 +1,4 @@
-class Api::V1::MusicsController < ApplicationController
+class Api::MusicsController < ApplicationController
 
     def index
         @songs = Music.all
@@ -24,7 +24,7 @@ class Api::V1::MusicsController < ApplicationController
     def search
         spot_songs = RSpotify::Track.search(params[:q])
         @songs = spot_songs.map do |spot_songs|
-          Track.new_from_spotify_song(spot_songs)
+          Music.new_from_spotify_song(spot_songs)
         end
     render json: @songs
     end

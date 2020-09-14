@@ -35,9 +35,6 @@ class ReviewsController < ApplicationController
        redirect_to review_url      
     end
 
-    
-    
-
     private
 
     def review_params
