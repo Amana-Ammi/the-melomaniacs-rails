@@ -27,7 +27,6 @@ class ReviewsController < ApplicationController
     end
 
     def update
-        # raise params.inspect
         @review.update(review_params)
         redirect_to review_path(@review)
     end
@@ -45,7 +44,7 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:title,:content)
+        params.require(:review).permit(:title,:content,:song_or_album_name, :artist_name)
     end
 
     def set_review

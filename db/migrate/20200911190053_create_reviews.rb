@@ -2,8 +2,7 @@ class CreateReviews < ActiveRecord::Migration[6.0]
   def change
     create_table :reviews do |t|
       t.string :title
-      t.string :song_name
-      t.string :album_name
+      t.string :song_or_album_name
       t.string :artist_name
       t.string :content
 

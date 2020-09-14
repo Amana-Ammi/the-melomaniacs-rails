@@ -24,8 +24,7 @@ ActiveRecord::Schema.define(version: 2020_09_11_190856) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "title"
-    t.string "song_name"
-    t.string "album_name"
+    t.string "song_or_album_name"
     t.string "artist_name"
     t.string "content"
     t.integer "user_id", null: false
