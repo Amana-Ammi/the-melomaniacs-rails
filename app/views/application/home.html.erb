@@ -7,12 +7,13 @@
 </div>
 <br>
 
-
-<ol>
-    <li><%= link_to "Login", login_path%></li>
-</ol>
-<ol>
-    <li><%= link_to "Sign Up", signup_path%></li>
-</ol>
+<% if !logged_in? %>
+    <ol>
+        <li><%= link_to "Login", login_path%></li>
+    </ol>
+    <ol>
+        <li><%= link_to "Sign Up", signup_path%></li>
+    </ol>
+<% end %>
 
 
