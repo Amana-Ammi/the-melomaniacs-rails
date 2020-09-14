@@ -20,7 +20,11 @@ class ReactionsController < ApplicationController
     end
 
     def index
-        @reactions = Reaction.all
+        if @review = Review.find_by_id(params[:review_id])
+            @reactions = @review.reactions
+        else
+            @reactions = Reaction.all
+        end
     end
 
     private

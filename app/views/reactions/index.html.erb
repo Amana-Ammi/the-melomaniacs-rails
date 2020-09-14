@@ -1,9 +1,13 @@
 <h1> Reactions </h1>
+<br>
 
 <% @reactions.each do |reaction|%>
-<p>
+<ol>
+    <%= reaction.review.title %>:
+    <br>
     <%= reaction.user.username.capitalize %> said:<br>
    "<%= reaction.comment.capitalize %>"
-</p>
+    <br><br>
+</ol>
 
 <% end %>
