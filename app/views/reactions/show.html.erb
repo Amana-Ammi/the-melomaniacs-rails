@@ -1,3 +1,5 @@
 <h1> Reactions </h1>
 
-<%= @reaction.comment%>
+<p>
+    <%= @reaction.user.username.capitalize %> said: "<%= @reaction.comment.capitalize%>"
+</p>

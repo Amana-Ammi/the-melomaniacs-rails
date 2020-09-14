@@ -1,8 +1,9 @@
-<h1>All Reactions to One User Review</h1>
+<h1> Reactions </h1>
 
 <% @reactions.each do |reaction|%>
-
-    <%= reaction.comment %>
-    <%= reaction.user.username %>
+<p>
+    <%= reaction.user.username.capitalize %> said:<br>
+   "<%= reaction.comment.capitalize %>"
+</p>
 
 <% end %>
