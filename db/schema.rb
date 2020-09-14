@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_09_11_190856) do
 
-  create_table "musics", force: :cascade do |t|
-    t.string "name"
-    t.string "artist"
-    t.string "album"
-    t.string "genre"
-    t.string "image"
-    t.string "preview"
-    t.integer "popularity"
-    t.string "spotify_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "reactions", force: :cascade do |t|
     t.string "comment"
     t.integer "user_id", null: false
@@ -37,11 +24,25 @@ ActiveRecord::Schema.define(version: 2020_09_11_190856) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "title"
+    t.string "song_name"
+    t.string "album_name"
+    t.string "artist_name"
     t.string "content"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string "name"
+    t.string "artist"
+    t.string "album"
+    t.string "image"
+    t.string "preview"
+    t.string "spotify_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

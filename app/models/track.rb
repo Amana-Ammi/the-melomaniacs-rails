@@ -1,7 +1,7 @@
-class Music < ApplicationRecord
+class Track < ApplicationRecord
 
     def self.new_from_spotify_song(spotify_song)
-        Music.new(
+        Track.new(
           spotify_id: spotify_song.id,
           name: spotify_song.name,
           artist: spotify_song.artists[0].name,

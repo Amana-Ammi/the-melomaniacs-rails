@@ -3,17 +3,23 @@
 <%= render partial: 'layouts/errors', locals: {i: @review} %>
 
 <%= form_for(@review) do |f| %>
+<ul>
+    <li><%= f.label :title, "TITLE:" %></li>
+    <li><%= f.text_field :title %></li>
 
-    <%= f.label :title, "TITLE:" %>
-    <%= f.text_field :title %>
+    <li><%= f.label :content, "CONTENT:" %></li>
+    <li><%= f.text_area :content %></li>
 
-    <%= f.label :content, "CONTENT:" %>
-    <%= f.text_area :content %>
-
-    <%= f.submit "Share Your Opinion"%>
-
+    <%= f.submit "Share Your Opinion"%></li>
+</ul>
 <% end %>
 
-<%= form_tag %>
-#search field
+<%= form_tag("/search", method: "get") do %>
+<br>
+    <%= label_tag(:q, "Search For:")%>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search")%>
+<br>
+<% end %>
+
 #need a place for song/album image and song preview

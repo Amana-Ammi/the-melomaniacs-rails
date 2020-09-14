@@ -1,0 +1,9 @@
+<h1> Find Something To Review </h1>
+
+<%= form_tag("/track_search", method: "get") do %>
+<br>
+    <%= label_tag(:q, "Search For:")%>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search")%>
+<br>
+<% end %>
