@@ -1,12 +1,15 @@
+
 <h1>Single Review Show Page</h1>
+<br>
 
-<h3>Your <%= @review.title.capitalize %> review for "<%= @review.song_or_album_name%>" by 
-<%= @review.artist_name %> </h3>
-<p><%= @review.content %><p>
+<div class="container">
+    <h3>Your <%= @review.title.capitalize %> review for "<%= @review.song_or_album_name%>" by 
+    <%= @review.artist_name %> </h3>
+    <p><%= @review.content %><p>
+</div>
 
 
 
-
-
-
-<%= link_to "Edit Review", edit_review_url(@review.id)%>
+<ul>
+    <li><%= link_to "Edit Review", edit_review_url(@review.id)%></li>
+</ul>

@@ -37,7 +37,8 @@ div {
 }
 
 h1 {
-    position: right;
+    width: 50%;
+    position: center;
     left: 100px;
     top: 150px;
     color: black;
@@ -63,14 +64,17 @@ ul li {
     text-align: center;
     display: inline-flex ;
     margin: auto;
+    width: 143%;
 }
   
 ul li a {
     text-decoration: none;
     color: rgb(10, 10, 10);
     padding: 5px 20px;
-    border: 5px solid #fff;
+    border: 5px solid black;
     transition: 0.06s ease;
+    position: relative;
+    
     
 }
 
@@ -108,4 +112,14 @@ a:visited {
     color: rgb(236, 208, 208);
 }
 
- 
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+    width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-title h1{
+    color: rgb(236, 208, 208);
+}
