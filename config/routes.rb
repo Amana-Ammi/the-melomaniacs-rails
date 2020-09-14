@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :reactions, only: [:new, :index]
   end
 
-  resources :musics do
+  resources :tracks do
     collection do
       get :top_100
       get :random
