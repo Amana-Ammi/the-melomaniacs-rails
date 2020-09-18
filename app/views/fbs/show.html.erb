@@ -1,5 +1,15 @@
-<h1> Hello, <%= @fb.name.titleize %></h1><br>
+<h1> Hello, <%= @fb.name.split(" ")[0] %></h1><br>
 
-<%= link_to "New Review", new_review_path %>
+  <img src="<%= @fb.image %>">
 <br>
+<div class="container">
+    <div class="child">
+<p> Welcome Back! </p><br>
+
+    <p>
+        Did you just get done listening to Drake's new song? Or are you just done arguing over Kanye?</p><br>
+        <p> Either way, any artist,</p>
+        <p>any genre, no one is off limits here. Let us know how you're feeling about the latest music or even the oldies. </p>
+    </div>
+</div>
 

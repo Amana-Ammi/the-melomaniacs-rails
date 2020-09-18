@@ -3,7 +3,7 @@ class FbsController < ApplicationController
         @fb = Fb.find_or_create_by(uid: auth['uid']) do |u|
           u.name = auth['info']['name']
           u.image = auth['info']['image']
-          @fb.save
+
         end
   #    binding.pry
         session[:user_id] = @fb.id
@@ -17,5 +17,9 @@ class FbsController < ApplicationController
      
       def auth
         request.env['omniauth.auth']
+      end
+
+      def first_name(full_name)
+        full_name.split(" ")[0]
       end
 end

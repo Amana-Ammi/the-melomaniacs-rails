@@ -141,3 +141,24 @@ footer.branding {
     text-align: center;
     background-color: rgba(245, 184, 92, 0.5);;
 }
+
+img {
+    border-radius: 50%;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10%;
+  }
+
+.second-child {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(245, 184, 92, 0.4);
+}

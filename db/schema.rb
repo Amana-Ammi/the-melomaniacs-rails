@@ -41,17 +41,6 @@ ActiveRecord::Schema.define(version: 2020_09_14_195805) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "tracks", force: :cascade do |t|
-    t.string "name"
-    t.string "artist"
-    t.string "album"
-    t.string "image"
-    t.string "preview"
-    t.string "spotify_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"

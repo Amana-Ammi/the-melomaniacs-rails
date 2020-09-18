@@ -8,4 +8,8 @@ module ApplicationHelper
         !!current_user
     end
 
+    def authorized?(review)
+        review.user == current_user
+    end
+
 end

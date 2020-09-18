@@ -10,11 +10,15 @@
         <h3> by </h3><br>
         <h3> <%= @review.artist_name %>: </h3><br>
                 <p><%= @review.content %><p>
+<br>
+<% if @review.user != current_user%>
+    <%= link_to "React to this Review", new_review_reaction_path(@review.id)%>
+<% end %>
     </div>
 </div>
 
 
-
+<% if logged_in? && @review.user == current_user%>
 <ol>
     <li><%= link_to "Edit Review", edit_review_url(@review.id)%></li>
 </ol>
@@ -23,3 +27,4 @@
     <li><%= link_to "Delete Review", review_path(@review), method: :delete %></li>
 
 </ol>
+<% end %>

@@ -3,27 +3,16 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/auth/spotify/callback' => 'users#spotify'
   delete '/logout' => 'sessions#destroy'
   get '/auth/facebook/callback' => 'fbs#create'
-  # get '/track_search' => 'musics#search'
+
   
   resources :fbs
   resources :users
   resources :reactions
+  
   resources :reviews do 
     resources :reactions, only: [:new, :index]
   end
-
-  resources :tracks do
-    collection do
-      get :top_100
-      get :random
-      get :search
-    end
-  end
-
-
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

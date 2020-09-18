@@ -1,13 +1,15 @@
 <h1>ALL REVIEWS </h1>
 
-<% @reviews.each do |review| %>
 <div class="form">
+
+<% @reviews.each do |review| %>
+
     <h3><%= link_to review.title.capitalize, review_path(review.id) %></h3>
+    <br>
     <p>
         <%= review.content.capitalize %><br>
         <%= review.user.username.capitalize %>
-    </p><br>
-
-    <%= link_to "React to this Review", new_review_reaction_path(review.id)%>
-</div>
+    </p>
+<br>----------------------------------------<br>
 <% end %>
+</div>
