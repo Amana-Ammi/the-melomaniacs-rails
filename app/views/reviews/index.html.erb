@@ -7,8 +7,8 @@
     <h3><%= link_to review.title.capitalize, review_path(review.id) %></h3>
     <br>
     <p>
-        <%= review.content.capitalize %><br>
-        <%= review.user.username.capitalize %>
+        <%= review.content.capitalize %><br><br>
+        By: <%= review.user.username.capitalize %>
     </p>
 <br>----------------------------------------<br>
 <% end %>
