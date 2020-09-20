@@ -1,21 +1,16 @@
 <h1> Login</h1>  
 
-<%= flash[:error] %>
-<br>
-<p><%= form_for(:user) do |f|%>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+<%= flash[:error] %><br>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+<div class="form">
+    <%= form_tag users_path do %>
+ 
+        <%= render  "users/new" %><br>
 
-    <%= f.submit "Login" %>
-</p>
+        <%= submit_tag "Login" %><br><br>
 
-<br>OR<br>
-<br>
 
-<%= link_to('Log in with Facebook!', '/auth/facebook') %>
-<%# <%= link_to 'Sign in with Spotify', '/auth/spotify' %> 
+        <%= link_to('Log in with Facebook!', '/auth/facebook') %>
 
-<%end%>
+    <%end%>
+</div>

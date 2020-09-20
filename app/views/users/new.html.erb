@@ -1,18 +1,15 @@
-<h1> Join the Crew </h1>
-
-<br>
+<h1> Join the Crew </h1><br>
 
 <%= render partial: 'layouts/errors', locals: {i: @user} %>
 
-<%= form_for(@user) do |f|%>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+<div class="form">
+    <%= form_tag users_path do %>
+        
+        <br><label> USERNAME: </label>
+        <%= text_field_tag :username %><br>
 
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+        <%= render "new" %><br>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.submit "Join Now" %>
-<%end%>
+        <%= submit_tag "Join Now" %>
+    <%end%>
+</div>
