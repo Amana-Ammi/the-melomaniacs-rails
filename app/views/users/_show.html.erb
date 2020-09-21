@@ -1,16 +1,17 @@
 <div class="container">
     <div class="child">
 <p> Welcome Back! </p><br>
-
     <p>
         Did you just get done listening to Drake's new song? Or are you just done arguing over Kanye?</p><br>
         <p> Either way, any artist,</p>
         <p>any genre, any song no one is off limits here. Let us know how you're feeling about the latest music or even the oldies. </p>
     </div>
+</div>
+
 <div class="container">
     <div class="reaction">
+    YOUR REACTIONS: <br><br>
     <% current_user.reactions.each do |reaction| %>
-       YOUR REACTIONS: <br><br>
        <%= link_to reaction.review.title, review_path(reaction.review.id) %><br>
     <% end %>
     </div>
