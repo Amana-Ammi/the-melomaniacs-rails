@@ -44,7 +44,7 @@ GETTING STARTED
 
 HOW-TO
 
-     <!-- After running the program, you'll be greeted by the Welcome page. You'll have two options to the right, "sign up" or "log in".
+     <!-- After running the program, you'll be greeted by the Welcome page. You'll have two options at the top, "log in" or "sign up".
 
      After signing up, you'll be automatically logged in and can begin browsing the navigation bar on the top of the screen. -->
 
@@ -54,7 +54,7 @@ SUPPORT
 
 ACKNOWLEDGEMENTS
 
-    Free Stock Photo --> 
+    Free Stock Photo --> https://www.pexels.com/photo/black-lx90-cassette-tape-1228497/
 
 LICENSE
 
