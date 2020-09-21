@@ -7,4 +7,11 @@
         <p> Either way, any artist,</p>
         <p>any genre, any song no one is off limits here. Let us know how you're feeling about the latest music or even the oldies. </p>
     </div>
+<div class="container">
+    <div class="reaction">
+    <% current_user.reactions.each do |reaction| %>
+       YOUR REACTIONS: <br><br>
+       <%= link_to reaction.review.title, review_path(reaction.review.id) %><br>
+    <% end %>
+    </div>
 </div>

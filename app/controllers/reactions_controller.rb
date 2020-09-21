@@ -36,4 +36,5 @@ class ReactionsController < ApplicationController
     def set_review
         @review = Review.find_by_id(params[:review_id])
     end
+
 end

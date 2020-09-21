@@ -14,8 +14,10 @@ module ApplicationHelper
         end
     end
 
-    def authorized?(review)
-        review.user == current_user
+    def not_current_user(i)
+        if i.user != current_user
+            redirect_to '/'
+        end
     end
-
+    
 end

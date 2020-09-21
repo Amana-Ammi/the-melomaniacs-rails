@@ -36,7 +36,7 @@ class ReviewsController < ApplicationController
     def destroy
         not_current_user
         @review.destroy
-        redirect_to reviews_path 
+        redirect_to reviews_path , notice: "Deletion Successful"
     end
 
     private
@@ -54,4 +54,5 @@ class ReviewsController < ApplicationController
             redirect_to reviews_path
         end
     end
+
 end
