@@ -24,27 +24,19 @@ class ReviewsController < ApplicationController
     end
 
     def edit
-        if @review.user != current_user
-            redirect_to reviews_path
-        end
+        not_current_user
     end
 
     def update
-        if @review.user == current_user
-            @review.update(review_params)
-            redirect_to review_path(@review)
-        else
-            redirect_to reviews_path
-        end
+        not_current_user
+        @review.update(review_params)
+        redirect_to review_path(@review)
     end
 
     def destroy
-        if @review.user == current_user
-            @review.destroy
-            redirect_to reviews_path 
-        else
-            redirect_to reviews_path
-        end
+        not_current_user
+        @review.destroy
+        redirect_to reviews_path 
     end
 
     private
@@ -55,5 +47,11 @@ class ReviewsController < ApplicationController
 
     def set_review
         @review = Review.find_by_id(params[:id])
+    end
+
+    def not_current_user
+        if @review.user != current_user
+            redirect_to reviews_path
+        end
     end
 end
