@@ -5,7 +5,7 @@ class FbsController < ApplicationController
           u.image = auth['info']['image']
 
         end
-  #    binding.pry
+#this could overlap a user from the users table. Fix! Foreign keys.
         session[:user_id] = @fb.id
         redirect_to fb_path(@fb)
     end

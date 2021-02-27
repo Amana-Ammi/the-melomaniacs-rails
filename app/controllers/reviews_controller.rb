@@ -39,6 +39,12 @@ class ReviewsController < ApplicationController
         redirect_to reviews_path , notice: "Deletion Successful"
     end
 
+    def song
+        #all song_album_reviews
+        @reviews = Review.all
+    end
+
+
     private
 
     def review_params

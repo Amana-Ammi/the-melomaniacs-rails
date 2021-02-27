@@ -1,0 +1,11 @@
+<div class="form">
+
+<% @reviews.order_by_time.each do |review| %>
+
+    
+        <%= review.song_or_album_name.capitalize %><br><br>
+        By: <%= review.user.username.capitalize %>
+    </p>
+<br>----------------------------------------<br>
+<% end %>
+</div>

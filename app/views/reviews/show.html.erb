@@ -10,6 +10,7 @@
         <h3> by </h3><br>
         <h3> <%= @review.artist_name %>: </h3><br>
                 <p><%= @review.content %><p><br>
+                
             <% if @review.user != current_user%>
                 <%= link_to "React to this Review", new_review_reaction_path(@review.id)%>
             <% end %>
